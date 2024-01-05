@@ -1,0 +1,43 @@
+.container-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin-left: 200px;
+  }
+  
+  .title-form { 
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .box1,
+  .box2 {
+    display: flex; 
+    margin-bottom: 40px; 
+  }
+  
+  .box1 label,
+  .box2 label {
+    width: 120px; 
+    margin-right: 10px;
+  }
+  
+  .box1 input,
+  .box2 input {
+    margin-right: 30px;
+  }
+  
+  .box2 {
+    margin-bottom: 20px; 
+  }
+  
+  button[type="submit"] { 
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

@@ -1,0 +1,38 @@
+.container {
+    margin: 0;
+    background-color: gray;
+    position: fixed;
+    left: 0;
+    top: 0; 
+    height: 100%;
+    width: 250px; 
+    overflow-y: auto;
+}
+
+.container h1 {
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.container li {
+    margin-bottom: 30px;
+}
+.container li a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 20px;
+    margin-left: 20px;
+    background-color: #ddd;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container li a:hover {
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+}
