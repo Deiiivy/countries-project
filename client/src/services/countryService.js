@@ -30,29 +30,11 @@ const getAllCountries = async () => {
 
 const createCountry = async (countryData) => {
   try {
-    const response = await axios.post('http://localhost:5000/graphql', {
-      query: `
-        mutation CreateCountry($input: CreateCountryInput!) {
-          createCountry(input: $input) {
-            name
-            code
-            continent {
-              name
-            }
-            languages {
-              name
-            }
-          }
-        }
-      `,
-      variables: {
-        input: countryData,
-      },
-    });
+    const response = await axios.post('http://localhost:5000/api/create-country', countryData);
 
-    return response.data.data.createCountry;
+    return response.data
   } catch (error) {
-    console.error('Error creating country:', error);
+    console.error('Error creating country:', error.request);
     throw error;
   }
 };
