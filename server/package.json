@@ -5,15 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "dev": "nodemon --trace-warnings server/index.js"
+    "dev": "nodemon --trace-warnings index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^3.13.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
+    "graphql": "^16.8.1",
     "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
     "nodemon": "^3.0.2",
     "react-router-dom": "^6.21.1"
   }

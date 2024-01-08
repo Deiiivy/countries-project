@@ -5,8 +5,6 @@ import { createCountry, getAllCountries } from '../services/countryService.js';
 import '../styles/createCountryForm.css'
 
 function CreateCountryForm() {
-  const [createCountryMutation] = useMutation(CREATE_COUNTRY);
-
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {

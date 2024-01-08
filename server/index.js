@@ -5,15 +5,19 @@ const resolvers = require('./graphql/resolvers.js');
 const typeDefs = require('./graphql/typeDefs.js');
 const Country = require('./models/country.js');
 const Continent = require('./models/continent.js')
-
+const morgan = require('morgan') 
+const cors = require('cors')
 
 const app = express();
 const PORT = 5000;
 
-mongoose.connect('mongodb://127.0.0.1:27017/practice_countries');
+mongoose.connect('mongodb://127.0.0.1:27017/practice_countries')
+  .then(() => console.log('>>> Database connected'))
+  .catch((error) => console.log(`Error when try connect to database: ${error}`))
 
+app.use(cors())
 app.use(express.json());
-
+app.use(morgan('dev'))
 
 app.get('/api/get-all-countries', async (req, res) => {
   try {

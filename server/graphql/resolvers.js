@@ -19,6 +19,7 @@ const resolvers = {
   },
   Mutation: {
     createCountry: async (_, { input }) => {
+      console.log('first')
       const newCountry = await Country.create(input);
       return newCountry;
     },
